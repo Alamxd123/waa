@@ -1,0 +1,15 @@
+global_costmap:
+  global_frame: map
+  robot_base_frame: base_footprint
+  update_frequency: 1
+  publish_frequency:  0.5
+  #static_map: true #æ˜¯å¦ä½¿ç”¨ä¸€ä¸ªåœ°å›¾æˆ–è€…åœ°å›¾æœåŠ¡å™¨æ¥åˆå§‹åŒ–ä»£ä»·åœ°å›¾ï¼Œå¦‚æžœä¸ä½¿ç”¨é™æ€åœ°å›¾ï¼Œè¿™ä¸ªä¸ºfalse
+  rolling_window: false
+  transform_tolerance: 1
+
+  plugins:
+     - {name: static_layer, type: 'costmap_2d::StaticLayer'}
+     - {name: obstacle_layer, type: 'costmap_2d::VoxelLayer'}
+     - {name: inflation_layer, type: 'costmap_2d::InflationLayer'}
+ 
+
